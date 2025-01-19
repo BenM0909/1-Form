@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1-Form Auto-Fill</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">1-Form Auto-Fill</h1>
+        <p class="card-description">Fill PDF forms with your 1-Form data</p>
+      </div>
+      
+      <div id="status" class="status-container"></div>
+      
+      <div id="formSelector" style="display: none;">
+        <div class="form-group">
+          <label for="formList" class="form-label">Select your form</label>
+          <select id="formList" class="select">
+            <option value="">Choose a form to auto-fill</option>
+          </select>
+        </div>
+        
+        <button id="fillForm" class="btn btn-primary" disabled>
+          Auto-Fill PDF Form
+        </button>
+        
+        <div id="result" class="result-container"></div>
+      </div>
+      
+      <div id="loginPrompt" style="display: none;">
+        <p class="card-description">Please log in to use auto-fill</p>
+        <a href="https://form-d9742.firebaseapp.com/login" target="_blank" class="btn btn-secondary">
+          Login to 1-Form
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="firebase/firebase-app.js"></script>
+  <script src="firebase/firebase-auth.js"></script>
+  <script src="firebase/firebase-firestore.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
+
